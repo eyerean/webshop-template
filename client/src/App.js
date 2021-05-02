@@ -3,24 +3,24 @@ import logo from './logo.svg';
 import './App.css';
 
 const App = () => {
-
   React.useEffect(() => {
-console.log('in the hook?!')
-callBackendAPI()
-.then(res => {console.log('res', res)})
-.catch(err => console.log(err));
-}, []);
+    console.log('in the hook?!');
+    const reachApi = async () => {
+      const res = await callBackendAPI();
+      console.log('res', res);
+    };
+    reachApi();
+  }, []);
 
-const callBackendAPI = async () => {
-  const response = await fetch('/api');
-  const body = await response.json();
+  const callBackendAPI = async () => {
+    const response = await fetch('/api');
+    const body = await response.json();
 
-  if (response.status !== 200) {
-    throw Error(body.message) 
-  }
-  return body;
-};
-
+    if (response.status !== 200) {
+      throw Error(body.message);
+    }
+    return body;
+  };
 
   return (
     <div className="App">
@@ -29,6 +29,6 @@ const callBackendAPI = async () => {
       </header>
     </div>
   );
-}
+};
 
 export default App;

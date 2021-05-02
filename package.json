@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/eyerean/webshop-template#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "4.17.1",
+    "prettier": "2.2.1"
   }
 }
