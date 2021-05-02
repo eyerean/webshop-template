@@ -4,6 +4,8 @@
   "description": "a template for a webshop app",
   "main": "server.js",
   "scripts": {
+    "start:server": "nodemon server.js",
+    "start:client": "cd client && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
