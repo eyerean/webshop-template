@@ -3,11 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 
 const App = () => {
+  const [message, setMessage] = React.useState('');
+
   React.useEffect(() => {
-    console.log('in the hook?!');
+    console.log('++ env ++', process.env.NODE_ENV);
     const reachApi = async () => {
       const res = await callBackendAPI();
-      console.log('res', res);
+      setMessage(res?.message || 'API request failed!');
     };
     reachApi();
   }, []);
@@ -15,7 +17,6 @@ const App = () => {
   const callBackendAPI = async () => {
     const response = await fetch('/api');
     const body = await response.json();
-
     if (response.status !== 200) {
       throw Error(body.message);
     }
@@ -26,6 +27,8 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <p>{message}</p>
+        <p>TEST</p>
       </header>
     </div>
   );
