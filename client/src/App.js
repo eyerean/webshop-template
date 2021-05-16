@@ -27,7 +27,21 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Box m={2}>
-        <AppHeading>Give Your Best webshop!</AppHeading>
+        <Box>
+          <AppHeading>
+            <Box display="inline-block" mr={1}>
+              <img
+                alt="give-your-best-logo"
+                src="https://le-cdn.website-editor.net/d2225289b8824285a45b94181e06cee3/dms3rep/multi/opt/LOGO1+square-320w.png"
+                height="50px"
+                width="50px"
+              />
+            </Box>
+            <span style={{ verticalAlign: 'super' }}>
+              Give Your Best webshop
+            </span>
+          </AppHeading>
+        </Box>
         <i>{message}</i>
         <Box mt={1}>
           <Button>I'm a button!</Button>
