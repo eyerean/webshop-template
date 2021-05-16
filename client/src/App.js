@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Button } from './components';
+import { AppHeading, Button, Box } from './components';
 import { theme } from './theme';
-import logo from './logo.svg';
-import './App.css';
 
 const App = () => {
   const [message, setMessage] = React.useState('');
@@ -28,14 +26,15 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>{message}</p>
+      <Box m={2}>
+        <AppHeading>Give Your Best webshop!</AppHeading>
+        <i>{message}</i>
+        <Box mt={1}>
           <Button>I'm a button!</Button>
           <Button primary>I'm a primary button</Button>
-        </header>
-      </div>
+          <Button round>I'm a round button</Button>
+        </Box>
+      </Box>
     </ThemeProvider>
   );
 };
