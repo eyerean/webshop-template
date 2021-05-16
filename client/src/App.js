@@ -1,5 +1,7 @@
 import * as React from 'react';
+import { ThemeProvider } from 'styled-components';
 import { Button } from './components';
+import { theme } from './theme';
 import logo from './logo.svg';
 import './App.css';
 
@@ -25,15 +27,16 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{message}</p>
-        <Button>I'm a button!</Button>
-        <Button primary>I'm a primary button</Button>
-        <button>I'm a native button</button>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>{message}</p>
+          <Button>I'm a button!</Button>
+          <Button primary>I'm a primary button</Button>
+        </header>
+      </div>
+    </ThemeProvider>
   );
 };
 
