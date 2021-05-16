@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'production') {
 
 app.get('/api', (req, res) => {
   res.send({
-    message: 'The express backend is connected to react!',
+    message: 'The Express backend is connected to React!',
   });
 });
 
