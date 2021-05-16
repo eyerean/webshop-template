@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/eyerean/webshop-template/issues"
   },
-  "homepage": "https://github.com/eyerean/webshop-template#readme",
+  "homepage": "https://webshop-template.herokuapp.com/",
   "dependencies": {
     "body-parser": "^1.19.0",
     "concurrently": "^6.0.2",

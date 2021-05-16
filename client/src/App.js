@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Button } from './components';
 import logo from './logo.svg';
 import './App.css';
 
@@ -28,7 +29,9 @@ const App = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>{message}</p>
-        <p>TEST</p>
+        <Button>I'm a button!</Button>
+        <Button primary>I'm a primary button</Button>
+        <button>I'm a native button</button>
       </header>
     </div>
   );
